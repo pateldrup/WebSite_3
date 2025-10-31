@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEUni Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 50px; 
+    background-color: #fff; 
+    border-bottom: 1px solid #eee;
+    height: 70px; 
+    
+}
+
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; 
+    margin-right: 50px; 
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none; 
+    color: #333; 
+    padding: 0 15px; 
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007bff; 
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+
+.signup-btn {
+    text-decoration: none;
+    color: #00bcd4; 
+    border: 2px solid #00bcd4; 
+    border-radius: 20px; 
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+.hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 120px;
+      background-color: #f0fffe;
+    }
+
+    .hero-content {
+      max-width: 550px;
+      position: relative;
+    }
+
+    .hero-content h1 {
+      font-size: 38px;
+      color: #222;
+      line-height: 1.3;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight-yellow {
+      color: #ffcb05;
+      font-weight: 600;
+    }
+
+    .new-tag {
+      position: absolute;
+      top: -12px;
+      right: -30px;
+      background-color: #ff6666;
+      color: #fff;
+      font-size: 14px;
+      padding: 4px 10px;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    .hero-content p {
+      font-size: 17px;
+      color: #555;
+      margin: 15px 0 30px;
+    }
+
+    .btn {
+      background-color: #00c4b4;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00a89a;
+    }
+
+    .hero-image img {
+      width: 500px;
+    }
+
+    @media (max-width: 992px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 30px;
+      }
+      .hero-image {
+        margin-top: 40px;
+      }
+      .hero-image img {
+        width: 300px;
+      }
+      .new-tag {
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+.section-one {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 50px;
+  position: relative;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+.background-text {
+  position: absolute;
+  top: -60px;
+  left: -50px;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(100, 238, 226, 0.4);
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.left-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
+.right-content h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 70px;
+  height: 2px;
+  background-color: #43d6be;
+  margin-bottom: 15px;
+}
+
+.right-content ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.right-content ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.practice-btn {
+  padding: 14px 28px;
+  background-color: #f6f7f7;
+  color: #43d6be;
+ 
+  border: 2px solid #43d6be;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.practice-btn:hover {
+  background-color: #36c0ab86;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .left-image img {
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+
+  .background-text {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+.pte-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 50px;
+  position: relative;
+}
+
+.pte-title-box {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.pte-heading {
+  font-size: 2.3rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+.pte-watermark {
+  position: absolute;
+  
+  top: -60px;
+  left: -50px;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(100, 238, 226, 0.4);
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.pte-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.pte-left-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pte-photo {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.pte-photo:hover {
+  transform: scale(1.05);
+}
+
+.pte-right-box .pte-subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.pte-line {
+  width: 70px;
+  height: 2px;
+  background-color: #43d6be;
+  margin-bottom: 15px;
+}
+
+.pte-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.pte-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.pte-btn {
+  padding: 14px 30px;
+  background-color: transparent;
+  color: #12cbb5;
+  border: 2px solid #12cbb5;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pte-btn:hover {
+  background-color: #12cbb5;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .pte-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .pte-left-box {
+    margin-bottom: 50px;
+  }
+
+  .pte-watermark {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.pte-tools-section {
+  max-width: 1300px;
+  margin: 100px auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.pte-tools-header {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.pte-tools-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.pte-tools-watermark {
+  position: absolute;
+  top: -60px;
+  left: -50px;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(100, 238, 226, 0.4);
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.pte-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.pte-tool-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 25px 20px;
+  transition: 0.3s ease;
+}
+
+.pte-tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pte-tool-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pte-tool-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pte-tool-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.pte-tool-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.pte-tool-desc {
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .pte-tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pte-tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pte-materials-section {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+.materials-header {
+  position: relative;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.materials-watermark {
+  position: absolute;
+  top: -60px;
+  left: -50px;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(100, 238, 226, 0.5);
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.materials-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  color: #222;
+}
+
+.materials-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+
+.materials-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.materials-card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.underline {
+  width: 60px;
+  height: 2px;
+  background-color: #25c1a0;
+  margin: 8px auto 15px auto;
+}
+
+.materials-description {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 8px 22px;
+  border: 1px solid #25c1a0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #25c1a0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #25c1a0;
+  color: #fff;
+}
+.knowledge-section {
+  padding: 80px 120px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title .highlight {
+  color: #a8f1ed;
+  font-weight: 800;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.knowledge-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  padding: 30px 40px;
+  transition: all 0.3s ease;
+}
+
+.knowledge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.card-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.item-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.item-content {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.view-more {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #00bfa5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.view-more:hover {
+  color: #00997a;
+}
+
+.view-more .arrow {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.card-list p {
+  padding: 12px 0;
+  border-bottom: 1px solid #f4f4f4;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.card-list p:hover {
+  color: #00bfa5;
+  cursor: pointer;
+}
+
+.card-list .arrow {
+  color: #00bfa5;
+  font-size: 1rem;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+.section-title .highlight {
+  position: absolute;
+  top: -40px;
+  left: -50px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(168, 241, 237, 0.8);
+  z-index: -1;
+  transform: translateY(-20%);
+}
+
+.section-title .main-title {
+  position: relative;
+  z-index: 2;
+}
+
+.pte-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  
+}
+
+.pte-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.pte-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.pte-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pte-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.view-more {
+  color: #00bfa6;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.view-more span {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.view-more:hover span {
+  transform: translateX(3px);
+}
+
+.pte-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  border-top: 1px solid #eee;
+}
+
+.pte-list li {
+  padding: 15px 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.pte-list li span {
+  font-size: 1.2rem;
+  color: #555;
+  transition: transform 0.2s;
+}
+
+.pte-list li:hover span {
+  transform: translateX(4px);
+}
+
+
+
+.pte-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding-left: 50px;
+  max-width: 450px;
+}
+
+.pte-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pte-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+
+.view-more span {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.view-more:hover span {
+  transform: translateX(3px);
+}
+
+.pte-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #eee;
+}
+
+.pte-list li {
+  padding: 15px 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.pte-list li span {
+  font-size: 1.2rem;
+  color: #555;
+  transition: transform 0.2s;
+}
+
+.pte-list li:hover span {
+  transform: translateX(4px);
+}
+
+
+.pte-listening-section {
+  padding: 10px 70px;
+  border-radius: 10px;
+  margin-left: 65px;
+  margin-bottom: 40px;
+}
+
+
+
+.app-download {
+  position: relative;
+  background-image: url('https://dl26yht2ovo33.cloudfront.net/public/web_all/next/_next/static/images/home-en-download-app-bg-b2e911881f46a450aa11e2391c8a8a39.png');
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.app-overlay {
+  position: absolute;
+
+  inset: 0;
+  background-color: rgba(0, 40, 40, 0.8);
+}
+
+.app-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.app-subtitle {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+.app-desc {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #ddd;
+}
+
+.app-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.store-btn img {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.store-btn img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .app-download {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .app-title {
+    font-size: 1.6rem;
+  }
+
+  .store-btn img {
+    height: 48px;
+  }
+}
+.footer-section {
+  background-color: #2b2b34;
+  color: #cfcfcf;
+  padding: 40px 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 40px 0;
+}
+
+.footer-column h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #bcbcbc;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #00d8c9;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 30px 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.1rem;
+  }
+}
+.footer-bottom {
+  background-color: #2b2b34;
+  color: #cfcfcf;
+  padding: 40px 60px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-left p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #bfbfbf;
+}
+
+.footer-left a {
+  color: #9eb4c0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-left a:hover {
+  color: #00d8c9;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #ccc;
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.qr-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.qr-item {
+  text-align: center;
+}
+
+.qr-item img {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.qr-item p {
+  margin-top: 8px;
+  color: #bcbcbc;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .qr-section {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    margin: 0 8px;
+  }
+}
+
+
+    </style>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo-link">
+                <img src="https://cdn-g.apeuni.com/public/web/distFolder/production/img/header_logo.d5a605ec.png" alt="APEUni Logo" class="logo">
+            </a>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">PTE Practice</a>
+                <a href="#">Course</a>
+                <a href="#">Circle</a>
+                <a href="#">App</a>
+                <a href="#">Teacher Mode</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </header>
+
+
+    <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Practice PTE Academic & PTE Core
+        <span class="new-tag">New</span><br>
+        with AI Scorings <span class="highlight-yellow">for FREE</span>
+      </h1>
+      <p>Join 100,000 PTE test takers to practice.</p>
+      <a href="#" class="btn">Practice Now</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://dl26yht2ovo33.cloudfront.net/public/web_all/next/_next/static/images/home-en-banner-illustration-d82756a7e98790500d382b3f3590bd40.svg" alt="PTE Banner">
+    </div>
+  </section>
+ <section class="section-one">
+    <div class="section-heading">
+      <h2>PTE AI Practice Platform</h2>
+      <span class="background-text">ONE</span>
+    </div>
+
+    <div class="grid-container">
+      <div class="left-image">
+        <img src="https://dl26yht2ovo33.cloudfront.net/public/web_all/next/_next/static/images/home-en-section-one-left-5f8845b059ea1d914bc4601e75cd0ef6.png" alt="PTE AI Practice Platform" />
+      </div>
+
+      <div class="right-content">
+        <h3>Speaking & Writing AI Scorings</h3>
+        <div class="underline"></div>
+        <ul>
+          <li>APEUni PTE scoring engines</li>
+          <li>Evaluate speaking pronunciation & fluency</li>
+          <li>Check writing grammar and spelling</li>
+          <li>Synchronize practice records across Web & APPs</li>
+        </ul>
+        <button class="practice-btn">Practice Now</button>
+      </div>
+    </div>
+  </section>
+
+
+<section class="pte-section">
+    <div class="pte-title-box">
+      <h2 class="pte-heading">Why choose PTE?</h2>
+      <span class="pte-watermark">TWO</span>
+    </div>
+
+    <div class="pte-grid">
+      <div class="pte-left-box">
+        <img
+          src="https://apeuni-prod.oss-cn-hangzhou.aliyuncs.com/public/images/20250904_web_pearson.png"
+          alt="Student"
+          class="pte-photo"
+        />
+      </div>
+
+      <div class="pte-right-box">
+        <h3 class="pte-subtitle">
+          PTE is accepted by governments and<br />
+          universities around the world
+        </h3>
+        <div class="pte-line"></div>
+        <ul class="pte-list">
+          <li>Go worry-free with a single, 2-hour test</li>
+          <li>Celebrate your results typically within 48 hours*</li>
+          <li>Computer-based with fair, impartial scoring</li>
+          <li>Build confidence with our preparation resources</li>
+        </ul>
+        <button class="pte-btn">Find Out More</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pte-tools-section">
+    <div class="pte-tools-header">
+      <h2 class="pte-tools-title">PTE Study Tools</h2>
+      <span class="pte-tools-watermark">THREE</span>
+    </div>
+
+    <div class="pte-tools-grid">
+      <div class="pte-tool-card">
+        <div class="pte-tool-left">
+          <div class="pte-tool-icon" style="background-color: #ffe9eb;">
+            <img src="https://i.ibb.co/F4S2KfcM/Screenshot-2025-10-30-215029.png" alt="Book Icon">
+          </div>
+          <div class="pte-tool-text">
+            <h3 class="pte-tool-name">Vocab Book</h3>
+            <p class="pte-tool-desc">Contains 90%<br>exam vocabs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pte-tool-card">
+        <div class="pte-tool-left">
+          <div class="pte-tool-icon" style="background-color: #d7f7f4;">
+            <img src="https://i.ibb.co/k2Z3n7xc/Screenshot-2025-10-30-215202.png" alt="Microphone Icon">
+          </div>
+          <div class="pte-tool-text">
+            <h3 class="pte-tool-name">Shadowing</h3>
+            <p class="pte-tool-desc">Improve RA in<br>14 days</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pte-tool-card">
+        <div class="pte-tool-left">
+          <div class="pte-tool-icon" style="background-color: #e9f7ff;">
+            <img src="https://i.ibb.co/ZptRVccR/Screenshot-2025-10-30-215315.png" alt="Report Icon">
+          </div>
+          <div class="pte-tool-text">
+            <h3 class="pte-tool-name">AI Analysis</h3>
+            <p class="pte-tool-desc">Accurate score<br>report analysis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pte-tool-card">
+        <div class="pte-tool-left">
+          <div class="pte-tool-icon" style="background-color: #f1f1ff;">
+            <img src="https://i.ibb.co/RTp7LVDz/Screenshot-2025-10-30-215503.png" alt="Plus Icon">
+          </div>
+          <div class="pte-tool-text">
+            <h3 class="pte-tool-name">View More</h3>
+            <p class="pte-tool-desc">View more<br>study tools</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <section class="pte-materials-section">
+    <div class="materials-header">
+      <span class="materials-watermark">FOUR</span>
+      <h2 class="materials-title">Download PTE Study Materials</h2>
+    </div>
+
+    <div class="materials-card">
+      <h3 class="materials-card-title">Study Materials</h3>
+      <div class="underline"></div>
+      <p class="materials-description">
+        Useful study materials created by APEUni's PTE teaching experts
+      </p>
+      <a href="#" class="download-btn">Download</a>
+    </div>
+  </section>
+<section class="knowledge-section">
+
+  <h2 class="section-title">
+  <span class="highlight">FIVE</span>
+  <span class="main-title">PTE Knowledge</span>
+</h2>
+
+  
+
+  <div class="knowledge-grid">
+    <div class="knowledge-card">
+      <h3 class="card-title">PTE Academic Guide</h3>
+
+      <div class="card-item">
+        <h4 class="item-heading">What is the meaning of PTE?</h4>
+        <p class="item-content">
+          The full form of PTE is the Pearson Test of English, normally referring
+          to the academic version. It is also known as PTE-A, Pearson Academic,
+          or Pearson Test of English Academic. PTE is a computer-based exam. It
+          also provides online mock tests on Pearson PTE's website.
+        </p>
+        <a href="#" class="view-more">View more <span class="arrow">›</span></a>
+      </div>
+
+      <div class="card-list">
+        <p>PTE vs IELTS, what is the difference? <span class="arrow">›</span></p>
+        <p>How is PTE test scored? <span class="arrow">›</span></p>
+        <p>How to book PTE exams? <span class="arrow">›</span></p>
+        <p>How to prepare for PTE exams? <span class="arrow">›</span></p>
+      </div>
+    </div>
+
+    <div class="knowledge-card">
+      <h3 class="card-title">PTE Speaking Guide</h3>
+
+      <div class="card-item">
+        <h4 class="item-heading">Read Aloud exam tips</h4>
+        <p class="item-content">
+          Read Aloud (RA) is one of the most difficult question types in PTE
+          Speaking. Pronunciation and fluency are much more important in scoring
+          than content. Try to keep your tone smooth and avoid unnatural pauses.
+        </p>
+        <a href="#" class="view-more">View more <span class="arrow">›</span></a>
+      </div>
+
+      <div class="card-list">
+        <p>Repeat Sentence exam tips <span class="arrow">›</span></p>
+        <p>Describe Image exam tips <span class="arrow">›</span></p>
+        <p>Re-tell Lecture exam tips <span class="arrow">›</span></p>
+        <p>Answer Short Question exam tips <span class="arrow">›</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="pte-section">
+
+  <div class="pte-grid">
+    <div class="pte-card">
+      <h3>PTE Writing Guide</h3>
+      <div class="pte-content">
+        <h4>Summarize Written Text exam tips</h4>
+        <p>
+          Summarize Written Text (SWT) is a very simple question type. There are
+          two keys in answering: to find key points in the passage, and to connect
+          the key points into a grammatically correct sentence.
+        </p>
+        <a href="#" class="view-more">View more <span>&#8250;</span></a>
+      </div>
+
+      <ul class="pte-list">
+        <li>Write Essay exam tips <span>&#8250;</span></li>
+        <li>PTE write essay materials <span>&#8250;</span></li>
+      </ul>
+    </div>
+
+    <div class="pte-card">
+      <h3>PTE Reading Guide</h3>
+      <div class="pte-content">
+        <h4>Multiple Choice Single Answer exam tips</h4>
+        <p>
+          The Reading Multiple Choice Single Answer (MCS) question type accounts
+          for only a very small proportion of marks in the overall Reading score.
+          The most important technique for MCS is time management. Please complete
+          each question within 1 or 2 minutes.
+        </p>
+        <a href="#" class="view-more">View more <span>&#8250;</span></a>
+      </div>
+
+      <ul class="pte-list">
+        <li>Multiple Choice Multiple Answers exam tips <span>&#8250;</span></li>
+        <li>Re-order Paragraphs exam tips <span>&#8250;</span></li>
+        <li>Fill in the Blanks (Drag and Drop) exam tips <span>&#8250;</span></li>
+        <li>Fill in the Blanks (Dropdown) exam tips <span>&#8250;</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="pte-listening-section">
+  
+
+  <div class="pte-card">
+    <div class="pte-content">
+      <h4>Summarize Spoken Text exam tips</h4>
+      <p>
+        Summarize Spoken Text (SST) is actually a very simple question type in PTE. 
+        Focus on the grammar and spelling of your written answer. 
+        Content is actually not that important in scoring.
+      </p>
+    </div>
+
+    <a href="#" class="view-more">View more <span>&#8250;</span></a>
+
+    <ul class="pte-list">
+      <li>Listening Multiple Choice exam tips <span>&#8250;</span></li>
+      <li>Listening Fill in the Blanks exam tips <span>&#8250;</span></li>
+      <li>Highlight Incorrect Words exam tips <span>&#8250;</span></li>
+      <li>Write from Dictation exam tips <span>&#8250;</span></li>
+    </ul>
+  </div>
+</section>
+
+ <section class="app-download">
+  <div class="app-overlay"></div>
+  <div class="app-content">
+    <h2 class="app-title">Download App</h2>
+    <p class="app-subtitle">PTE Exam Practice – APEUni</p>
+    <p class="app-desc">Learn, Practice and Improve PTE with APEUni</p>
+
+    <div class="app-buttons">
+      <a href="#" class="store-btn">
+        <img src="https://dl26yht2ovo33.cloudfront.net/public/web_all/next/_next/static/images/app-store-e6a96635a9894d6a63c77e94cadbebb9.svg" alt="App Store">
+      </a>
+      <a href="#" class="store-btn">
+        <img src="https://dl26yht2ovo33.cloudfront.net/public/web_all/next/_next/static/images/google-play-store-7df289f006fc5e852d0081bf6deb430c.svg" alt="Google Play">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+ <footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Pearson PTE</h3>
+      <ul>
+        <li><a href="#">Pearson Official Website</a></li>
+        <li><a href="#">Pearson PTE Mock Tests</a></li>
+        <li><a href="#">Book PTE Tests</a></li>
+        <li><a href="#">Contact Pearson PTE</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>PTE Course</h3>
+      <ul>
+        <li><a href="#">PTE Campus Course Australia</a></li>
+        <li><a href="#">PTE Speaking Course</a></li>
+        <li><a href="#">PTE Writing Course</a></li>
+        <li><a href="#">PTE Reading Course</a></li>
+        <li><a href="#">PTE Listening Course</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>PTE Resources</h3>
+      <ul>
+        <li><a href="#">Study Materials Download</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>APP Download</h3>
+      <ul>
+        <li><a href="#">APEUni iOS APP</a></li>
+        <li><a href="#">APEUni Android APP</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Email: <a href="mailto:support@apeuni.com">support@apeuni.com</a></li>
+        <li>Telegram: <a href="https://t.me/pteapeuni">t.me/pteapeuni</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+ <footer class="footer-bottom">
+  <div class="footer-bottom-container">
+    <div class="footer-left">
+      <p>Shenzhen APEUni Education Technology Co., Ltd.</p>
+      <p>深圳猿宇宙教育科技有限公司 粤ICP备18035327号</p>
+      <p>Copyright ©2025 APEUni Edu</p>
+      <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+
+      <div class="social-icons">
+        <a href="#"><img src="https://i.ibb.co/Kj6SKH6G/Screenshot-2025-10-30-233841.png" ></a>
+        <a href="#"><img src="https://i.ibb.co/xKz8q94v/Screenshot-2025-10-30-233945.png" ></a>
+        <a href="#"><img src="https://i.ibb.co/rK0TvTxB/Screenshot-2025-10-30-234141.png" ></a>
+        <a href="#"><img src="https://i.ibb.co/VYHkxq35/Screenshot-2025-10-30-234148.png" ></a>
+        <a href="#"><img src="https://i.ibb.co/Y4sLRVfq/Screenshot-2025-10-30-234154.png" ></a>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="qr-section">
+        <div class="qr-item">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=iOSApp" alt="iOS QR">
+          <p>APEUni iOS App</p>
+        </div>
+        <div class="qr-item">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=AndroidApp" alt="Android QR">
+          <p>APEUni Android App</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
